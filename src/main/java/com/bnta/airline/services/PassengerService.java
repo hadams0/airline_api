@@ -35,10 +35,10 @@ public class PassengerService {
     }
 
     // book passenger onto a flight
-    public Passenger addPassengerToFlight(){
+    public Passenger addPassengerToFlight(Passenger passenger){
         Passenger passenger = new Passenger(
-                passenger.getName();
-
-        )
+                passenger.getName(),
+                passenger.getContactNumber()
+        );
     }
 }
