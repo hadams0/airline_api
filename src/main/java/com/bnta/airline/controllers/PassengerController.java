@@ -15,15 +15,15 @@ public class PassengerController {
     @Autowired
     FlightService flightService;
 
-    @GetMapping
-
-    @GetMapping(value = "/{id}")
-
-    @PostMapping
-
-    @PatchMapping(value = "/{id}")
-
-    @PutMapping(value = "/{id}")
+//    @GetMapping
+//
+//    @GetMapping(value = "/{id}")
+//
+//    @PostMapping
+//
+//    @PatchMapping(value = "/{id}")
+//
+//    @PutMapping(value = "/{id}")
 
 
 

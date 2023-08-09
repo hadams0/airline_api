@@ -23,7 +23,7 @@ public class Passenger {
     @JsonIgnoreProperties({"passengers"})
     @ManyToMany
     @JoinTable(
-            name = "passenger_flights",
+            name = "passengers_flights",
             joinColumns = @JoinColumn(name = "passenger_id"),
             inverseJoinColumns = @JoinColumn(name = "flight_id")
     )
@@ -36,6 +36,14 @@ public class Passenger {
     }
 
     public Passenger() {}
+
+    public void addFlight(Flight flight){
+        this.flights.add(flight);
+    }
+
+    public void removeFlight(Flight flight){
+        this.flights.remove(flight);
+    }
 
     // Getters & Setters
 

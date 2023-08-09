@@ -11,12 +11,12 @@ public class FlightController {
     @Autowired
     FlightService flightService;
 
-    @GetMapping
-
-    @GetMapping(value = "/{id}")
-
-    @PostMapping
-
-    @DeleteMapping(value = "/{id}")
+//    @GetMapping
+//
+//    @GetMapping(value = "/{id}")
+//
+//    @PostMapping
+//
+//    @DeleteMapping(value = "/{id}")
 
 }
