@@ -1,5 +1,6 @@
 package com.bnta.airline.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -19,7 +20,13 @@ public class Passenger {
     @Column(name = "contact_number")
     private int contactNumber;
 
+    @JsonIgnoreProperties({"passengers"})
     @ManyToMany
+    @JoinTable(
+            name = "passenger_flights",
+            joinColumns = @JoinColumn(name = "passenger_id"),
+            inverseJoinColumns = @JoinColumn(name = "flight_id")
+    )
     private List<Flight> flights;
 
     public Passenger (String name, int contactNumber){

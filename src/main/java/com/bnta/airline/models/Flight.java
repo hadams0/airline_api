@@ -1,5 +1,6 @@
 package com.bnta.airline.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -27,7 +28,8 @@ public class Flight {
     @Column(name = "departure_time")
     private LocalTime departureTime;
 
-    @ManyToMany
+    @JsonIgnoreProperties({"flights"})
+    @ManyToMany(mappedBy = "flights")
     private List<Passenger> passengers;
 
     public Flight(String destination, int capacity, LocalDate departureDate, LocalTime departureTime){
