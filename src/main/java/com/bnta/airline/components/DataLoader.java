@@ -78,26 +78,38 @@ public class DataLoader implements ApplicationRunner {
                 "Hannah",
                 3734267
         );
+        passenger1.addFlight(flight2);
+        passenger1.addFlight(flight5);
 
         Passenger passenger2 = new Passenger(
                 "Zsolt",
                 7251892
         );
+        passenger2.addFlight(flight5);
 
         Passenger passenger3 = new Passenger(
                 "Anna",
                 1027436
         );
+        passenger3.addFlight(flight1);
+        passenger3.addFlight(flight4);
 
         Passenger passenger4 = new Passenger(
                 "Ed",
                 183735
         );
+        passenger4.addFlight(flight2);
+        passenger4.addFlight(flight4);
+        passenger4.addFlight(flight5);
 
         Passenger passenger5 = new Passenger(
                 "Colin",
                 739204
         );
+        passenger5.addFlight(flight1);
+        passenger5.addFlight(flight3);
+        passenger5.addFlight(flight4);
+        passenger5.addFlight(flight5);
 
         passengerRepository.saveAll(Arrays.asList(
                 passenger1,
