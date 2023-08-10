@@ -1,6 +1,7 @@
 package com.bnta.airline.components;
 
 import com.bnta.airline.models.Flight;
+import com.bnta.airline.models.Passenger;
 import com.bnta.airline.repositories.FlightRepository;
 import com.bnta.airline.repositories.PassengerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,8 +72,39 @@ public class DataLoader implements ApplicationRunner {
                 flight5
         ));
 
-
         // create passengers
 
+        Passenger passenger1 = new Passenger(
+                "Hannah",
+                3734267
+        );
+
+        Passenger passenger2 = new Passenger(
+                "Zsolt",
+                7251892
+        );
+
+        Passenger passenger3 = new Passenger(
+                "Anna",
+                1027436
+        );
+
+        Passenger passenger4 = new Passenger(
+                "Ed",
+                183735
+        );
+
+        Passenger passenger5 = new Passenger(
+                "Colin",
+                739204
+        );
+
+        passengerRepository.saveAll(Arrays.asList(
+                passenger1,
+                passenger2,
+                passenger3,
+                passenger4,
+                passenger5
+        ));
     }
 }
